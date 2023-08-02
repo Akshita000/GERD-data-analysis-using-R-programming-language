@@ -1,0 +1,13 @@
+# Performing univariare analysis to identify the association between individual risk factors and gastroesophageal reflux disease (GERD)
+library(readxl) data <- read_excel("path of the file.xlsx")
+result <- fisher.test(data) 
+print(result)
+
+library(readxl) 
+file_path <- "Age_distribution_metadata.xlsx" 
+data <- read_excel("Age distribution metadata.xlsx") 
+str(data) contingency_table <- table(data$Variable1, data$Variable2) 
+result <- chisq.test(contingency_table) 
+print(result)
+
+# Performing multivariate regression analysis to identify the association between risk factors as a whole and gastroesophageal reflux disease (GERD)
