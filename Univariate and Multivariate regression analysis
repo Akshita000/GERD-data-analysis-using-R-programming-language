@@ -1,5 +1,6 @@
 # Performing univariare analysis to identify the association between individual risk factors and gastroesophageal reflux disease (GERD)
-library(readxl) data <- read_excel("path of the file.xlsx")
+library(readxl) 
+data <- read_excel("path of the file.xlsx")
 result <- fisher.test(data) 
 print(result)
 
